@@ -143,5 +143,6 @@ func BenchmarkPassthrough(b *testing.B) {
 		inCh <- i
 	}
 	o.Stop()
+	o.WaitForShutdown()
 	b.StopTimer()
 }
